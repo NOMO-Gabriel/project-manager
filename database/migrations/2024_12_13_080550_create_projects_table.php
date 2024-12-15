@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
-            $table->string('status');
+            $table->enum('status',['pending','in_progress','completed'])->default('pending');
             $table->timestamp('start_date');
             $table->timestamp('end_date');
             $table->foreignIdFor(User::class)->user_id;
