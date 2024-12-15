@@ -1,0 +1,1 @@
+php artisan make:view view_name
